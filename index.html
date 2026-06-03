@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Centro Joyero Select — La nueva casa de la joyería mexicana · Plaza Tapatía, Guadalajara</title>
+<meta name="description" content="159 boutiques de joyería bajo un mismo techo. Oro, plata, relojería, talleres e insumos. Menudeo y mayoreo en Plaza Tapatía, Guadalajara.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Archivo:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="shortcut icon" href="assets/favicon.png" type="image/x-icon">
+</head>
+<body>
+
+<!-- CUSTOM CURSOR -->
+<div class="cursor-dot"></div>
+<div class="cursor-follower"></div>
+
+<!-- SCROLL PROGRESS -->
+<div class="progress-bar" id="progress"></div>
+
+<!-- ══════════ NAVBAR ══════════ -->
+<nav class="nav" id="nav">
+  <a href="#top" class="nav-logo" aria-label="Centro Joyero Select" style="position:relative;text-decoration:none">
+    <img class="l-light" src="assets/logo-light.png" alt="Centro Joyero Select">
+    <img class="l-dark" src="assets/logo.png" alt="">
+  </a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#oferta">Oferta</a></li>
+    <li><a href="#experiencia">Experiencia</a></li>
+    <li><a href="#ocasiones">Ocasiones</a></li>
+    <li><a href="#galeria">Galería</a></li>
+    <li><a href="#faq">FAQ</a></li>
+  </ul>
+  <a href="#contacto" class="nav-cta">Agenda tu visita <span class="arr">→</span></a>
+  <button class="nav-burger" id="burger" aria-label="Menú"><span></span><span></span><span></span></button>
+</nav>
+
+<!-- ══════════ HERO — scroll-driven rotating views ══════════ -->
+<header class="hero" id="top">
+  <div class="hero-sticky">
+    <!-- building views (cross-fade with scroll) -->
+    <div class="hf" data-cap="La fachada · Plaza Tapatía" style="background-image:url('assets/facade.jpg')"></div>
+    <div class="hf" data-cap="Salón de Oro" style="background-image:url('assets/room-red.jpg')"></div>
+    <div class="hf" data-cap="Relojería &amp; Diamantes" style="background-image:url('assets/room-green.jpg')"></div>
+    <div class="hf" data-cap="Boutiques de autor" style="background-image:url('assets/room-wood.jpg')"></div>
+    <div class="hf" data-cap="El jardín interior" style="background-image:url('assets/courtyard.jpg')"></div>
+    <div class="hf" data-cap="Galería de arcos" style="background-image:url('assets/colonnade.jpg')"></div>
+
+    <div class="hero-scrim"></div>
+
+    <div class="hero-ui" id="heroUi">
+      <span class="hero-kicker">Plaza Tapatía · Guadalajara</span>
+      <h1 class="hero-h1">
+        <span class="line-wrap"><span class="line">La nueva casa de la</span></span>
+        <span class="line-wrap"><span class="line"><em>joyería</em> mexicana.</span></span>
+      </h1>
+      <p class="hero-sub hero-fade">159 boutiques bajo un mismo techo. Oro, plata, relojería, talleres e insumos — para quien busca su pieza y para quien surte al país.</p>
+      <div class="hero-ctas hero-fade d2">
+        <a href="#contacto" class="btn btn-primary">Agenda tu visita <span class="arr">→</span></a>
+        <a href="#oferta" class="btn btn-ghost">Recorre el centro</a>
+      </div>
+      <div class="hero-trust hero-fade d3">
+        <span>Menudeo y mayoreo</span>
+        <span>3 accesos directos</span>
+        <span>Envíos a todo México</span>
+      </div>
+    </div>
+
+    <!-- frame caption + counter -->
+    <div class="hero-meta">
+      <div class="hero-index"><span id="hIdx">01</span><span class="tot"> / 06</span></div>
+      <div class="hero-caption" id="hCap">La fachada · Plaza Tapatía</div>
+    </div>
+
+    <!-- vertical rail -->
+    <div class="hero-rail" id="hRail">
+      <span class="dot on"></span><span class="dot"></span><span class="dot"></span>
+      <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+    </div>
+
+    <div class="scroll-cue"><span>Scroll</span><div class="bar"></div></div>
+  </div>
+</header>
+
+<!-- ══════════ MARQUEE ══════════ -->
+<div class="marquee">
+  <div class="marquee-track">
+    <span>Oro 10K · 14K · 18K</span><i>◆</i><span>Plata 925</span><i>◆</i><span>Relojería</span><i>◆</i><span>Talleres &amp; diseño</span><i>◆</i><span>Mayoreo nacional</span><i>◆</i><span>Insumos &amp; empaques</span><i>◆</i>
+    <span>Oro 10K · 14K · 18K</span><i>◆</i><span>Plata 925</span><i>◆</i><span>Relojería</span><i>◆</i><span>Talleres &amp; diseño</span><i>◆</i><span>Mayoreo nacional</span><i>◆</i><span>Insumos &amp; empaques</span><i>◆</i>
+  </div>
+</div>
+
+<!-- ══════════ STATS ══════════ -->
+<section class="stats" id="stats">
+  <div class="wrap">
+    <div class="stats-grid">
+      <div class="stat fade-up"><div class="stat-num counter" data-target="159">0</div><div class="stat-label">Boutiques bajo un mismo techo</div></div>
+      <div class="stat fade-up delay-1"><div class="stat-num counter" data-target="28" data-suffix="%">0</div><div class="stat-label">De la joyería de México nace en Jalisco</div></div>
+      <div class="stat fade-up delay-2"><div class="stat-num counter" data-target="3">0</div><div class="stat-label">Accesos directos al centro</div></div>
+      <div class="stat fade-up delay-3"><div class="stat-num counter" data-target="2" data-suffix="h">0</div><div class="stat-label">Respuesta promedio por WhatsApp</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ OFERTA — bento ══════════ -->
+<section id="oferta">
+  <div class="wrap">
+    <div class="sec-head fade-up">
+      <span class="eyebrow">La oferta</span>
+      <h2 class="sec-title split-title">
+        <span class="line-wrap"><span class="line">Todo lo que la joyería</span></span>
+        <span class="line-wrap"><span class="line">necesita, <em>en un recorrido.</em></span></span>
+      </h2>
+    </div>
+    <div class="bento">
+      <div class="card col3 fade-up">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M12 2l3 6 6 .9-4.5 4.3 1 6-5.5-3-5.5 3 1-6L3 8.9 9 8z"/></svg></div>
+        <h3>Menudeo</h3>
+        <p>Del anillo de compromiso al regalo de cumpleaños. Cientos de opciones en oro, plata, bisutería y relojería para cada ocasión y presupuesto.</p>
+        <span class="tag">Ticket promedio $4–5K MXN</span>
+      </div>
+      <div class="card col3 fade-up delay-1">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M3 7h18M3 12h18M3 17h18"/><path d="M7 3v18M17 3v18"/></svg></div>
+        <h3>Mayoreo</h3>
+        <p>Surte tu negocio directo desde Guadalajara. Precios de fábrica, gran variedad de locatarios y la confianza del corazón joyero de México.</p>
+        <span class="tag">Envíos a todo el país</span>
+      </div>
+      <div class="card col2 fade-up">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 00-5.6 5.6l-6.4 6.4 2 2 6.4-6.4a4 4 0 005.6-5.6l-2.5 2.5-2-2z"/></svg></div>
+        <h3>Talleres</h3>
+        <p>Reparación, soldadura, pulido y diseño a medida con los mejores artesanos de Jalisco.</p>
+        <span class="tag">Diseño personalizado</span>
+      </div>
+      <div class="card col2 fade-up delay-1">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 00-1-1.7l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.7l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/><path d="M3.3 7L12 12l8.7-5M12 22V12"/></svg></div>
+        <h3>Insumos</h3>
+        <p>Empaques, exhibidores, materia prima y maquinaria. Todo para operar y crecer tu negocio joyero.</p>
+        <span class="tag">Para revendedores</span>
+      </div>
+      <div class="card col2 fade-up delay-2">
+        <div class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l2.5 2.5"/></svg></div>
+        <h3>Relojería</h3>
+        <p>Relojes, accesorios y servicio especializado. Marcas y piezas para cada estilo.</p>
+        <span class="tag">Venta &amp; servicio</span>
+      </div>
+      <div class="card feature fade-up">
+        <div class="feature-txt">
+          <span class="eyebrow" style="margin-bottom:1rem">Hecho a tu medida</span>
+          <h3>Diseño personalizado</h3>
+          <p>¿Tienes una idea? Nuestros talleres dan vida a piezas únicas: grabados, iniciales, formas especiales y quilatajes a medida. Trae tu boceto o cuéntanos tu visión.</p>
+          <a href="#contacto" class="btn btn-primary" style="margin-top:1.6rem;align-self:flex-start">Diseñar mi pieza <span class="arr">→</span></a>
+        </div>
+        <div class="feature-img" style="background-image:url('assets/room-red.jpg')"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ EXPERIENCIA — split ══════════ -->
+<section id="experiencia" class="dark-sec">
+  <div class="wrap">
+    <div class="split">
+      <div class="split-media fade-up">
+        <img src="assets/courtyard.jpg" alt="Jardín interior del Centro Joyero Select con cafetería">
+        <div class="float-stat"><b>+159</b><span>boutiques, cafetería, jardín y espacios para eventos</span></div>
+      </div>
+      <div>
+        <span class="eyebrow">La experiencia</span>
+        <h2 class="sec-title split-title" style="margin-bottom:1.2rem">
+          <span class="line-wrap"><span class="line">Más que un</span></span>
+          <span class="line-wrap"><span class="line"><em>centro joyero.</em></span></span>
+        </h2>
+        <p class="fade-up" style="color:rgba(251,248,242,.74);max-width:46ch">Un destino diseñado para quedarse: arquitectura de madera y piedra, luz natural y un recorrido pensado para descubrir.</p>
+        <div class="steps">
+          <div class="step fade-up"><span class="n">01</span><div><h4>Cafetería &amp; jardín interior</h4><p>Un patio con árboles para hacer una pausa entre vitrinas.</p></div></div>
+          <div class="step fade-up delay-1"><span class="n">02</span><div><h4>Rincones para fotos</h4><p>Espacios pensados para compartir, no solo para comprar.</p></div></div>
+          <div class="step fade-up delay-2"><span class="n">03</span><div><h4>Live shopping &amp; pop-ups</h4><p>Eventos y marcas invitadas que renuevan el piso constantemente.</p></div></div>
+          <div class="step fade-up delay-3"><span class="n">04</span><div><h4>3 accesos estratégicos</h4><p>Plaza Tapatía, Calzada Independencia / SJD y estacionamiento Cabañas.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ OCASIONES — tabs ══════════ -->
+<section id="ocasiones" class="dark-sec" style="background:var(--color-dark-2)">
+  <div class="wrap">
+    <div class="sec-head fade-up">
+      <span class="eyebrow">Ocasiones</span>
+      <h2 class="sec-title split-title">
+        <span class="line-wrap"><span class="line">Para cada momento,</span></span>
+        <span class="line-wrap"><span class="line"><em>hay una pieza.</em></span></span>
+      </h2>
+    </div>
+    <div class="tabs-nav fade-up" id="tabsNav">
+      <button class="tab-btn active" data-tab="bodas">Bodas &amp; compromiso</button>
+      <button class="tab-btn" data-tab="xv">XV años</button>
+      <button class="tab-btn" data-tab="mayoreo">Mayoreo</button>
+      <button class="tab-btn" data-tab="regalos">Regalos</button>
+      <button class="tab-btn" data-tab="diseno">Personalizado</button>
+    </div>
+    <div class="tab-panels">
+      <div class="tab-panel active" data-panel="bodas">
+        <div class="tab-txt"><h3>Bodas &amp; compromiso</h3><p>Del anillo de compromiso a las argollas y arras. Encuentra todo para el gran día sin recorrer varias plazas — estilos, quilatajes y presupuestos para cada pareja.</p><a href="#contacto" class="btn btn-primary">Cotizar argollas <span class="arr">→</span></a></div>
+        <div class="tab-media"><img src="assets/room-wood.jpg" alt="Boutique de anillos"><span class="cap">Argollas · Arras · Compromiso</span></div>
+      </div>
+      <div class="tab-panel" data-panel="xv">
+        <div class="tab-txt"><h3>XV años &amp; celebraciones</h3><p>Medallas, cruces, esclavas, cadenas y dijes para las fechas que se recuerdan toda la vida. Regalos que cuentan una historia y duran para siempre.</p><a href="#contacto" class="btn btn-primary">Explorar piezas <span class="arr">→</span></a></div>
+        <div class="tab-media"><img src="assets/room-red.jpg" alt="Salón de oro"><span class="cap">Medallas · Esclavas · Dijes</span></div>
+      </div>
+      <div class="tab-panel" data-panel="mayoreo">
+        <div class="tab-txt"><h3>Mayoreo nacional</h3><p>Vienen de Chihuahua, CDMX, Monterrey y todo el Bajío a surtirse aquí. Precios directos de fábrica. El nuevo punto de mayoreo de México ya está en Plaza Tapatía.</p><a href="#contacto" class="btn btn-primary">Cotizar mayoreo <span class="arr">→</span></a></div>
+        <div class="tab-media"><img src="assets/colonnade.jpg" alt="Galería de boutiques"><span class="cap">Mayoreo &amp; menudeo · Todo México</span></div>
+      </div>
+      <div class="tab-panel" data-panel="regalos">
+        <div class="tab-txt"><h3>Regalos especiales</h3><p>Cumpleaños, Día de la Madre, San Valentín, Navidad, graduaciones. Asesoría personalizada para encontrar el regalo perfecto en tu presupuesto. Empaque incluido.</p><a href="#contacto" class="btn btn-primary">Pedir asesoría <span class="arr">→</span></a></div>
+        <div class="tab-media"><img src="assets/room-green.jpg" alt="Vitrinas de relojería"><span class="cap">Para cada fecha y cada persona</span></div>
+      </div>
+      <div class="tab-panel" data-panel="diseno">
+        <div class="tab-txt"><h3>Diseño personalizado</h3><p>¿Tienes una idea en mente? Nuestros talleres la convierten en una pieza única: grabados, iniciales, formas especiales y quilatajes a medida. Tu idea, nuestra artesanía.</p><a href="#contacto" class="btn btn-primary">Diseñar mi pieza <span class="arr">→</span></a></div>
+        <div class="tab-media"><img src="assets/facade.jpg" alt="Fachada del centro"><span class="cap">Tu idea · Nuestra artesanía</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ FULL-WIDTH BREAK ══════════ -->
+<section class="break" style="padding:0">
+  <div class="bg" id="breakBg" style="background-image:url('assets/colonnade.jpg')"></div>
+  <div class="break-inner">
+    <div class="giant fade-up">159</div>
+    <h2 class="fade-up delay-1">boutiques. Un solo destino.</h2>
+    <p class="fade-up delay-2">La mayor variedad de joyería bajo un mismo techo en Guadalajara. Oro, plata, relojería, talleres e insumos — todo a unos pasos.</p>
+    <a href="#contacto" class="btn btn-primary fade-up delay-3">Quiero visitarlos <span class="arr">→</span></a>
+  </div>
+</section>
+
+<!-- ══════════ GALERÍA ══════════ -->
+<section id="galeria">
+  <div class="wrap">
+    <div class="sec-head fade-up">
+      <span class="eyebrow">El recorrido</span>
+      <h2 class="sec-title split-title">
+        <span class="line-wrap"><span class="line">Del discreto</span></span>
+        <span class="line-wrap"><span class="line">al <em>bling bling.</em></span></span>
+      </h2>
+    </div>
+    <div class="gallery">
+      <div class="gitem big fade-up"><img src="assets/facade.jpg" alt="Fachada Centro Joyero Select"><div class="glabel"><b>La fachada</b><span>Plaza Tapatía</span></div></div>
+      <div class="gitem fade-up delay-1"><img src="assets/room-red.jpg" alt="Salón de oro"><div class="glabel"><b>Oro</b><span>10K · 14K · 18K</span></div></div>
+      <div class="gitem fade-up delay-2"><img src="assets/room-green.jpg" alt="Relojería y diamantes"><div class="glabel"><b>Relojería</b><span>Watches &amp; Diamond</span></div></div>
+      <div class="gitem wide fade-up delay-1"><img src="assets/courtyard.jpg" alt="Jardín interior"><div class="glabel"><b>Jardín interior</b><span>Cafetería &amp; eventos</span></div></div>
+      <div class="gitem fade-up delay-2"><img src="assets/room-wood.jpg" alt="Boutiques de autor"><div class="glabel"><b>Boutiques</b><span>Marcas de autor</span></div></div>
+      <div class="gitem fade-up delay-3"><img src="assets/colonnade.jpg" alt="Galería de arcos"><div class="glabel"><b>Galería</b><span>Arcos &amp; luz natural</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ DIFERENCIADORES ══════════ -->
+<section id="diferencia" class="dark-sec">
+  <div class="wrap">
+    <div class="sec-head fade-up" style="max-width:70ch">
+      <span class="eyebrow">Por qué aquí</span>
+      <h2 class="sec-title split-title">
+        <span class="line-wrap"><span class="line">El centro joyero</span></span>
+        <span class="line-wrap"><span class="line">que <em>faltaba.</em></span></span>
+      </h2>
+    </div>
+    <div class="compare">
+      <div class="comp-col comp-old fade-up">
+        <h4>El centro joyero de siempre</h4>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M18 6L6 18M6 6l12 12"/></svg>Pasillos saturados y poca luz</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M18 6L6 18M6 6l12 12"/></svg>Difícil estacionarse y llegar</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M18 6L6 18M6 6l12 12"/></svg>Solo un lugar para comprar y salir</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M18 6L6 18M6 6l12 12"/></svg>Sin presencia digital real</li>
+        </ul>
+      </div>
+      <div class="comp-col comp-new fade-up delay-1">
+        <h4>Centro Joyero Select</h4>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M20 6L9 17l-5-5"/></svg>Arquitectura de madera, piedra y luz natural</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M20 6L9 17l-5-5"/></svg>3 accesos directos y estacionamiento</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M20 6L9 17l-5-5"/></svg>Cafetería, jardín, eventos y pop-ups</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M20 6L9 17l-5-5"/></svg>Menudeo y mayoreo en el mismo recorrido</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ FAQ ══════════ -->
+<section id="faq">
+  <div class="wrap">
+    <div class="sec-head fade-up" style="text-align:center;margin:0 auto">
+      <span class="eyebrow center">Preguntas frecuentes</span>
+      <h2 class="sec-title" style="margin-bottom:0">Lo que quieres saber.</h2>
+    </div>
+    <div class="faq" id="faqList">
+      <div class="faq-item open">
+        <button class="faq-q">¿Dónde están ubicados y cómo llego?<span class="faq-ico"></span></button>
+        <div class="faq-a"><p>Estamos en Plaza Tapatía, Guadalajara, con 3 accesos directos: Plaza Tapatía, Calzada Independencia / San Juan de Dios y el estacionamiento Cabañas. Llegas en auto, transporte público o caminando desde el Centro Histórico.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">¿Venden al mayoreo o solo al menudeo?<span class="faq-ico"></span></button>
+        <div class="faq-a"><p>Ambos. Encuentras menudeo para el consumidor final y mayoreo para revendedores en el mismo recorrido. Muchos locatarios manejan precios directos de fábrica y realizan envíos a todo México.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">¿Qué tipo de joyería puedo encontrar?<span class="faq-ico"></span></button>
+        <div class="faq-a"><p>Oro 10K, 14K y 18K, plata 925, bisutería, relojería, piezas para bodas, XV años y regalos, además de talleres de reparación y diseño, e insumos para el negocio joyero.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">¿Hacen piezas personalizadas?<span class="faq-ico"></span></button>
+        <div class="faq-a"><p>Sí. Nuestros talleres realizan diseños a medida: grabados, iniciales, formas especiales y quilatajes específicos. Puedes traer tu boceto o platicarnos tu idea y te asesoramos sin compromiso.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">¿Qué formas de pago aceptan?<span class="faq-ico"></span></button>
+        <div class="faq-a"><p>Aceptamos efectivo, tarjeta y crédito. Las condiciones pueden variar por locatario; con gusto te orientamos según lo que busques al agendar tu visita.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">¿Necesito cita para visitarlos?<span class="faq-ico"></span></button>
+        <div class="faq-a"><p>No es obligatorio, pero si nos cuentas qué buscas podemos guiarte directo al locatario indicado y ahorrarte tiempo. Respondemos por WhatsApp en menos de 2 horas.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ CONVERSION BANNER ══════════ -->
+<section class="cta-banner">
+  <div class="bg" style="background-image:url('assets/room-green.jpg')"></div>
+  <div class="inner">
+    <span class="eyebrow center" style="color:var(--gold-light);justify-content:center">Te esperamos</span>
+    <h2 class="fade-up">Tu próxima pieza ya está aquí.</h2>
+    <p class="fade-up delay-1">Agenda tu visita o cotiza sin compromiso. Te asesoramos para encontrar exactamente lo que buscas — al mejor precio del corazón joyero de México.</p>
+    <a href="#contacto" class="btn btn-primary fade-up delay-2">Agendar mi visita <span class="arr">→</span></a>
+  </div>
+</section>
+
+<!-- ══════════ CONTACTO / FORM ══════════ -->
+<section id="contacto" class="contact">
+  <div class="wrap">
+    <div class="form-grid">
+      <div class="form-side">
+        <span class="eyebrow">Contáctanos</span>
+        <h2>Cuéntanos qué buscas y <em>te guiamos.</em></h2>
+        <p>Déjanos tus datos y lo que necesitas. Nuestro equipo te responde por WhatsApp en menos de 2 horas — sin compromiso.</p>
+        <ul class="trust-list">
+          <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5"/></svg>Más de 159 boutiques disponibles</li>
+          <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5"/></svg>Atención personalizada en piso</li>
+          <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5"/></svg>Menudeo y mayoreo en un solo lugar</li>
+          <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5"/></svg>Información confidencial</li>
+        </ul>
+      </div>
+      <div class="form-card fade-up">
+        <form id="leadForm" novalidate>
+          <div class="frow">
+            <div class="field"><label for="f-name">Nombre</label><input id="f-name" type="text" placeholder="Tu nombre" required></div>
+            <div class="field"><label for="f-wa">WhatsApp</label><input id="f-wa" type="tel" placeholder="33 0000 0000" required></div>
+          </div>
+          <div class="field"><label for="f-mail">Correo (opcional)</label><input id="f-mail" type="email" placeholder="tucorreo@ejemplo.com"></div>
+          <div class="field"><label for="f-int">¿Qué buscas?</label>
+            <select id="f-int" required>
+              <option value="" disabled selected>Selecciona una opción</option>
+              <option>Joyería para boda / compromiso</option>
+              <option>XV años o celebración</option>
+              <option>Joyería para regalo</option>
+              <option>Compra al mayoreo / surtido</option>
+              <option>Taller / reparación / diseño</option>
+              <option>Insumos y empaques</option>
+              <option>Solo quiero conocer el lugar</option>
+            </select>
+          </div>
+          <div class="field"><label for="f-msg">Cuéntanos más (opcional)</label><textarea id="f-msg" placeholder="Describe la pieza, el presupuesto o la fecha que tienes en mente"></textarea></div>
+          <label class="check"><input type="checkbox" required>Acepto el <a href="#">aviso de privacidad</a> y el tratamiento de mis datos para ser contactado.</label>
+          <button type="submit" class="btn btn-primary" style="justify-content:center">Quiero visitarlos <span class="arr">→</span></button>
+          <p class="form-foot">Respuesta en menos de 2 horas · Sin compromiso · 100% confidencial</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ FOOTER ══════════ -->
+<footer>
+  <canvas class="foot-canvas" id="footCanvas"></canvas>
+  <div class="foot-grid">
+    <div class="foot-brand">
+      <div class="foot-logo"><img src="assets/logo-light.png" alt="Centro Joyero Select"></div>
+      <p>La nueva casa de la joyería mexicana. 159 boutiques, talleres e insumos bajo un mismo techo, en el corazón de Guadalajara.</p>
+    </div>
+    <div class="foot-col">
+      <h5>Explora</h5>
+      <a href="#oferta">Oferta</a>
+      <a href="#experiencia">Experiencia</a>
+      <a href="#ocasiones">Ocasiones</a>
+      <a href="#galeria">Galería</a>
+    </div>
+    <div class="foot-col">
+      <h5>Visítanos</h5>
+      <p>Plaza Tapatía<br>Calzada Independencia / SJD<br>Guadalajara, Jalisco</p>
+    </div>
+    <div class="foot-col">
+      <h5>Contacto</h5>
+      <a href="https://wa.me/523300000000" target="_blank" rel="noopener">WhatsApp</a>
+      <a href="mailto:admin@centrojoyeroselect.com">admin@centrojoyeroselect.com</a>
+      <a href="#" target="_blank" rel="noopener">Instagram</a>
+      <a href="#" target="_blank" rel="noopener">Facebook</a>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <span>© 2026 Centro Joyero Select · Todos los derechos reservados</span>
+    <span>Desarrollado por <a href="http://dinametra.com/" target="_blank" rel="noopener">Dinametra.com</a></span>
+  </div>
+</footer>
+
+<!-- FLOATING CTA -->
+<div class="float-cta" id="floatCta">
+<!--   <a href="#contacto" class="float-pill">Agenda tu visita →</a>
+ -->  <a href="https://wa.me/523300000000" class="float-wa" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <svg viewBox="0 0 32 32"><path d="M16 3C9 3 3.5 8.5 3.5 15.5c0 2.3.6 4.5 1.8 6.4L3 29l7.3-2.2c1.8 1 3.8 1.5 5.7 1.5 7 0 12.5-5.5 12.5-12.5S23 3 16 3zm0 22.7c-1.8 0-3.5-.5-5-1.4l-.4-.2-4.3 1.3 1.3-4.2-.2-.4c-1-1.6-1.5-3.4-1.5-5.3C5.7 9.8 10.3 5.3 16 5.3s10.3 4.5 10.3 10.2S21.7 25.7 16 25.7zm5.7-7.6c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.5-1.6-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.5c.2-.2.2-.3.3-.5.1-.2.1-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.5.3-.7.3-1.4.2-1.5-.1-.2-.3-.2-.6-.4z"/></svg>
+  </a>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
